@@ -13,13 +13,6 @@ export class HerosComponent implements OnInit {
 
   heroes: Hero[] = [];
 
-  selectedHero?: Hero;
-  onSelect(hero: Hero): void {
-
-    this.messageService.add(`Hero compoent: Selected hero id=${hero.id}`);
-    this.selectedHero = hero;
-  }
-
   constructor(
           private heroService: HeroService,
           private messageService: MessageService,
